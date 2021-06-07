@@ -16,7 +16,7 @@ public class Update {
         System.out.println("<< ACTUALIZAR REGISTROS >>");
         
         System.out.println("Ingresar id del registro a modificar: ");
-        person.setIdPersona(leer.nextInt());
+        person.setIdPersona(Integer.parseInt(leer.nextLine()));
         
         String tablaBuscar = "tb_contacto";
         String camposBuscar = "id_contacto, nom_contacto, email_contacto, tel_contacto";
@@ -24,13 +24,13 @@ public class Update {
         utilerias.desplegarRegistros(tablaBuscar, camposBuscar, condicionBuscar);
         
         System.out.println("Nombre: ");
-        person.setNomPersona(leer.next());
+        person.setNomPersona(leer.nextLine());
         
         System.out.println("Correo electronico");
-        person.setEmailPersona(leer.next());
+        person.setEmailPersona(leer.nextLine());
         
         System.out.println("Telefono: ");
-        person.setTelPersona(leer.next());
+        person.setTelPersona(leer.nextLine());
         
         String tabla = "tb_contacto";
         String camposValoresNuevos = "nom_contacto = '" + person.getNomPersona() + "', email_contacto = '" + 
